@@ -203,6 +203,10 @@ db.createCollection("kurse", {
           bsonType: "string",
           description: "'fk_id_dozent' must be a string.",
         },
+        dauer: {
+          bsonType: "dauer",
+          description: "'dauer' must be a string.",
+        },
         start: {
           bsonType: "date",
           description: "'start' must be an date and is required.",

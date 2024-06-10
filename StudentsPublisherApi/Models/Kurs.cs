@@ -31,6 +31,11 @@ namespace StudentsPublisherApi.Models
         [BsonIgnoreIfNull]
         public string? fk_id_dozent { get; set; }
 
+        [BsonElement("dauer")]
+        [JsonPropertyName("length")]
+        [BsonIgnoreIfNull]
+        public string? Length { get; set; }
+
         [BsonElement("start")]
         [JsonPropertyName("start")]
         [BsonIgnoreIfNull]
