@@ -1,0 +1,37 @@
+services:
+  api:
+    image: api
+    container_name: kursverwaltungapi
+    build:
+      context: ../StudentsPublisherApi
+      dockerfile: Dockerfile
+    ports:
+      - 50001:8080
+    depends_on:
+      - mongodb
+    environment:
+      - MONGO_CONNECTION_STRING=mongodb://root:root@mongodb:27017
+    networks:
+      - kurs-network
+
+  mongodb:
+    image: mongo:latest
+    container_name: kursverwaltungmongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: kursverwaltung
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - mongo-data:/data/db
+    networks:
+      - kurs-network
+
+volumes:
+  mongo-data:
+
+networks:
+  kurs-network:
+    driver: bridge
