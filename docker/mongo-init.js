@@ -220,7 +220,7 @@ db.createCollection("kurse_lernende", {
   validator: {
     $jsonSchema: {
       bsonType: "object",
-      title: "lehrbetrieb_lernende Object Validation",
+      title: "kurse_lernende Object Validation",
       properties: {
         fk_id_kurs: {
           bsonType: "string",
