@@ -168,6 +168,10 @@ db.createCollection("lehrbetrieb_lernende", {
           bsonType: "string",
           description: "'fk_id_lernende' must be an string and is required.",
         },
+        beruf: {
+          bsonType: "string",
+          description: "'beruf' must be an string and is required.",
+        },
         start: {
           bsonType: "date",
           description: "'start' must be an date and is required.",

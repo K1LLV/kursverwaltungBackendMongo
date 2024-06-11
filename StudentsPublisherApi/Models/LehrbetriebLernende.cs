@@ -22,14 +22,19 @@ namespace StudentsPublisherApi.Models
         [BsonIgnoreIfNull]
         public string? fk_id_lernende { get; set; }
 
+        [BsonElement("beruf")]
+        [JsonPropertyName("beruf")]
+        [BsonIgnoreIfNull]
+        public string? beruf { get; set; }
+
         [BsonElement("start")]
         [JsonPropertyName("start")]
         [BsonIgnoreIfNull]
-        public DateTime? start { get; set; } = null!;
+        public DateTime? start { get; set; } = null;
 
         [BsonElement("ende")]
         [JsonPropertyName("ende")]
         [BsonIgnoreIfNull]
-        public DateTime? ende { get; set; } = null!;
+        public DateTime? ende { get; set; } = null;
     }
 }
