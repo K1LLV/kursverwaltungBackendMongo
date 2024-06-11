@@ -10,7 +10,7 @@ builder.Services.AddSingleton<StudentsService>();
 builder.Services.AddSingleton<KursService>();
 builder.Services.AddSingleton<KurseLernendeService>();
 builder.Services.AddSingleton<LehrbetriebService>();
-builder.Services.AddSingleton<LehrbetriebLernende>();
+builder.Services.AddSingleton<LehrbetriebLernendeService>();
 builder.Services.AddSingleton<LandService>();
 
 builder.Services.AddControllers();
