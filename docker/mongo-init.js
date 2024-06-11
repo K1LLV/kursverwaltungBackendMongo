@@ -37,8 +37,8 @@ db.createCollection("lernende", {
           description: "'telefon' must be a string.",
         },
         handy: {
-          bsonType: "date",
-          description: "'handy' must be a Date and is required.",
+          bsonType: "string",
+          description: "'handy' must be a string and is required.",
         },
         email: {
           bsonType: "string",
@@ -96,8 +96,8 @@ db.createCollection("dozenten", {
           description: "'telefon' must be a string.",
         },
         handy: {
-          bsonType: "date",
-          description: "'handy' must be a Date and is required.",
+          bsonType: "string",
+          description: "'handy' must be a string and is required.",
         },
         email: {
           bsonType: "string",
