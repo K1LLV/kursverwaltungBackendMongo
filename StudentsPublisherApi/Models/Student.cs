@@ -8,7 +8,8 @@ namespace StudentsPublisherApi.Models
     {
         [JsonPropertyName("id_lernende")]
         [BsonElement("_id")]
-        [BsonIgnoreIfNull]
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
 
         [BsonElement("vorname")]

@@ -8,7 +8,8 @@ namespace StudentsPublisherApi.Models
     {
         [JsonPropertyName("id_kurs")]
         [BsonElement("_id")]
-        [BsonIgnoreIfNull]
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
 
         [BsonElement("kursnummer")]
@@ -32,7 +33,7 @@ namespace StudentsPublisherApi.Models
         public string? fk_id_dozent { get; set; }
 
         [BsonElement("dauer")]
-        [JsonPropertyName("length")]
+        [JsonPropertyName("dauer")]
         [BsonIgnoreIfNull]
         public string? Length { get; set; }
 
